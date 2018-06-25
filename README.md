@@ -1,15 +1,15 @@
 <p align="center">
+    <img width="200" src="https://github.com/efritz/scarf/blob/master/images/scarf.png" alt="Scarf logo">
+</p>
+
+<h2 align="center">Scarf</h2>
+
+<p align="center">
     <a href="https://godoc.org/github.com/efritz/scarf"><img src="https://godoc.org/github.com/efritz/scarf?status.svg" alt="GoDoc"></a>
     <a href="http://travis-ci.org/efritz/scarf"><img src="https://secure.travis-ci.org/efritz/scarf.png" alt="Build Status"></a>
     <a href="https://codeclimate.com/github/efritz/scarf/maintainability"><img src="https://api.codeclimate.com/v1/badges/c0241cfb041a2bd78cf6/maintainability" alt="Maintainability"></a>
     <a href="https://codeclimate.com/github/efritz/scarf/test_coverage"><img src="https://api.codeclimate.com/v1/badges/c0241cfb041a2bd78cf6/test_coverage" alt="Test Coverage"></a>
 </p>
-
-<p align="center">
-    <img width="200" src="https://github.com/efritz/scarf/blob/master/images/scarf.png" alt="Scarf logo">
-</p>
-
-<h2 align="center">Scarf</h2>
 
 Scarf is a gRPC API framework built on top of the concepts brought to you by
 [nacelle](https://github.com/efritz/nacelle). For example usage, see the examples
