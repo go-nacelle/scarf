@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package proto;
+
+import "google/protobuf/empty.proto";
+
+service ValueService {
+    rpc Subscribe(google.protobuf.Empty) returns (stream Summary) {}
+    rpc QuietUpdate(stream Update) returns (Summary) {}
+    rpc NoisyUpdate(stream Update) returns (stream Summary) {}
+}
+
+message Update {
+    int32 delta = 1;
+}
+
+message Summary {
+    int32 updates = 1;
+    int32 value = 2;
+}
