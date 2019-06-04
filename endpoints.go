@@ -1,7 +1,7 @@
 package scarf
 
 import (
-	"github.com/efritz/nacelle"
+	"github.com/go-nacelle/nacelle"
 	"google.golang.org/grpc"
 )
 

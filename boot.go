@@ -1,9 +1,9 @@
 package scarf
 
 import (
-	"github.com/efritz/nacelle"
+	"github.com/go-nacelle/nacelle"
 
-	"github.com/efritz/scarf/logging"
+	"github.com/go-nacelle/scarf/logging"
 )
 
 // BootAndExit creates a nacelle Bootstrapper with the given name and

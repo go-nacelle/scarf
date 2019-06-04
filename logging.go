@@ -3,9 +3,9 @@ package scarf
 import (
 	"context"
 
-	"github.com/efritz/nacelle"
+	"github.com/go-nacelle/nacelle"
 
-	"github.com/efritz/scarf/logging"
+	"github.com/go-nacelle/scarf/logging"
 )
 
 var DefaultExtractors = []logging.LogFieldExtractor{

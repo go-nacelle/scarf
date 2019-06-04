@@ -9,7 +9,7 @@ import (
 
 	"google.golang.org/grpc"
 
-	"github.com/efritz/scarf/examples/simple/proto"
+	"github.com/go-nacelle/scarf/examples/simple/proto"
 )
 
 func main() {

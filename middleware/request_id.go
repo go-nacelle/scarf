@@ -3,12 +3,12 @@ package middleware
 import (
 	"context"
 
-	"github.com/efritz/nacelle"
+	"github.com/go-nacelle/nacelle"
 	"github.com/google/uuid"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
 
-	"github.com/efritz/scarf/logging"
+	"github.com/go-nacelle/scarf/logging"
 )
 
 type (

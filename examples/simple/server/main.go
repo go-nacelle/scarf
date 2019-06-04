@@ -7,13 +7,13 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	"github.com/efritz/nacelle"
+	"github.com/go-nacelle/nacelle"
 	"github.com/google/uuid"
 	"google.golang.org/grpc"
 
-	"github.com/efritz/scarf"
-	"github.com/efritz/scarf/examples/simple/proto"
-	"github.com/efritz/scarf/middleware"
+	"github.com/go-nacelle/scarf"
+	"github.com/go-nacelle/scarf/examples/simple/proto"
+	"github.com/go-nacelle/scarf/middleware"
 )
 
 type EndpointSet struct {

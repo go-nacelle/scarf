@@ -4,14 +4,14 @@ import (
 	"io"
 	"sync"
 
-	"github.com/efritz/nacelle"
+	"github.com/go-nacelle/nacelle"
 	"github.com/golang/protobuf/ptypes/empty"
 	"github.com/google/uuid"
 	"google.golang.org/grpc"
 
-	"github.com/efritz/scarf"
-	"github.com/efritz/scarf/examples/stream/proto"
-	"github.com/efritz/scarf/middleware"
+	"github.com/go-nacelle/scarf"
+	"github.com/go-nacelle/scarf/examples/stream/proto"
+	"github.com/go-nacelle/scarf/middleware"
 )
 
 type (

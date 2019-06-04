@@ -1,6 +1,6 @@
 package logging
 
-import "github.com/efritz/nacelle"
+import "github.com/go-nacelle/nacelle"
 
 type Initializer struct {
 	Services   nacelle.ServiceContainer `service:"container"`

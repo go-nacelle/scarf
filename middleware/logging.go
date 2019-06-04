@@ -5,10 +5,10 @@ import (
 	"time"
 
 	"github.com/efritz/glock"
-	"github.com/efritz/nacelle"
+	"github.com/go-nacelle/nacelle"
 	"google.golang.org/grpc"
 
-	"github.com/efritz/scarf/logging"
+	"github.com/go-nacelle/scarf/logging"
 )
 
 type LoggingMiddleware struct {
