@@ -2,7 +2,7 @@ package scarf
 
 import (
 	"github.com/go-nacelle/nacelle"
-	basegrpc "github.com/go-nacelle/nacelle/base/grpc"
+	 "github.com/go-nacelle/grpcbase"
 	"google.golang.org/grpc"
 )
 
@@ -10,7 +10,7 @@ type (
 	serverShim struct {
 		Services    nacelle.ServiceContainer `service:"container"`
 		endpointSet EndpointSet
-		server      *basegrpc.Server
+		server      *grpcbase.Server
 	}
 )
 
@@ -35,9 +35,9 @@ func (s *serverShim) Init(config nacelle.Config) error {
 		}
 	}
 
-	s.server = basegrpc.NewServer(
+	s.server = grpcbase.NewServer(
 		s.endpointSet,
-		basegrpc.WithServerOptions(
+		grpcbase.WithServerOptions(
 			grpc.UnaryInterceptor(makeUnaryInterceptor(middleware)),
 			grpc.StreamInterceptor(makeStreamInterceptor(middleware)),
 			grpc.StatsHandler(NewStatsHandler(nil)), // TODO - configure
