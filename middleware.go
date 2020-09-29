@@ -6,18 +6,16 @@ import (
 	"google.golang.org/grpc"
 )
 
-type (
-	// Middleware transforms unary and stream handlers into a decorated handler.
-	Middleware interface {
-		Init() error
+// Middleware transforms unary and stream handlers into a decorated handler.
+type Middleware interface {
+	Init() error
 
-		// ApplyUnary decorates a UnaryHandler.
-		ApplyUnary(grpc.UnaryHandler, *grpc.UnaryServerInfo) (grpc.UnaryHandler, error)
+	// ApplyUnary decorates a UnaryHandler.
+	ApplyUnary(grpc.UnaryHandler, *grpc.UnaryServerInfo) (grpc.UnaryHandler, error)
 
-		// ApplyStream decorates a UnaryHandler.
-		ApplyStream(grpc.StreamHandler, *grpc.StreamServerInfo) (grpc.StreamHandler, error)
-	}
-)
+	// ApplyStream decorates a UnaryHandler.
+	ApplyStream(grpc.StreamHandler, *grpc.StreamServerInfo) (grpc.StreamHandler, error)
+}
 
 func makeUnaryInterceptor(middleware []Middleware) grpc.UnaryServerInterceptor {
 	return func(ctx context.Context, req interface{}, info *grpc.UnaryServerInfo, f grpc.UnaryHandler) (val interface{}, err error) {

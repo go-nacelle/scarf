@@ -11,17 +11,16 @@ import (
 	"github.com/go-nacelle/scarf/logging"
 )
 
-type (
-	RequestIDMiddleware struct {
-		Logger             nacelle.Logger     `service:"logger"`
-		Decorator          *logging.Decorator `service:"logger-decorator"`
-		requestIDGenerator RequestIDGenerator
-		errorFactory       ErrorFactory
-	}
+type RequestIDMiddleware struct {
+	Logger             nacelle.Logger     `service:"logger"`
+	Decorator          *logging.Decorator `service:"logger-decorator"`
+	requestIDGenerator RequestIDGenerator
+	errorFactory       ErrorFactory
+}
 
-	RequestIDGenerator func() (string, error)
-	tokenRequestID     string
-)
+type RequestIDGenerator func() (string, error)
+
+type tokenRequestID string
 
 // TokenRequestID is the unique token to which the current request's unique
 // ID is written to the request context.

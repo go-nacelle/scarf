@@ -1,18 +1,16 @@
 package scarf
 
 import (
+	"github.com/go-nacelle/grpcbase"
 	"github.com/go-nacelle/nacelle"
-	 "github.com/go-nacelle/grpcbase"
 	"google.golang.org/grpc"
 )
 
-type (
-	serverShim struct {
-		Services    nacelle.ServiceContainer `service:"container"`
-		endpointSet EndpointSet
-		server      *grpcbase.Server
-	}
-)
+type serverShim struct {
+	Services    nacelle.ServiceContainer `service:"container"`
+	endpointSet EndpointSet
+	server      *grpcbase.Server
+}
 
 func NewServer(endpointSet EndpointSet) nacelle.Process {
 	return &serverShim{

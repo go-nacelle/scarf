@@ -14,15 +14,13 @@ import (
 	"github.com/go-nacelle/scarf/middleware"
 )
 
-type (
-	EndpointSet struct {
-		Logger      nacelle.Logger `service:"logger"`
-		value       int32
-		updates     int32
-		subscribers map[string]chan *proto.Summary
-		mutex       sync.RWMutex
-	}
-)
+type EndpointSet struct {
+	Logger      nacelle.Logger `service:"logger"`
+	value       int32
+	updates     int32
+	subscribers map[string]chan *proto.Summary
+	mutex       sync.RWMutex
+}
 
 func NewEndpointSet() *EndpointSet {
 	return &EndpointSet{

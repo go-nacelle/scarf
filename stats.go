@@ -7,14 +7,13 @@ import (
 	"google.golang.org/grpc/stats"
 )
 
-type (
-	StatsHandler struct {
-		handler stats.Handler
-	}
+type StatsHandler struct {
+	handler stats.Handler
+}
 
-	tokenClientID   string
-	tokenRemoteAddr string
-)
+type tokenClientID string
+
+type tokenRemoteAddr string
 
 var (
 	TokenClientID   = tokenClientID("scarf.client_id")

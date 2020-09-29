@@ -6,13 +6,11 @@ import (
 	"github.com/go-nacelle/nacelle"
 )
 
-type (
-	Decorator struct {
-		extractors []LogFieldExtractor
-	}
+type Decorator struct {
+	extractors []LogFieldExtractor
+}
 
-	LogFieldExtractor func(ctx context.Context, fields nacelle.LogFields)
-)
+type LogFieldExtractor func(ctx context.Context, fields nacelle.LogFields)
 
 func NewDecorator(extractors ...LogFieldExtractor) *Decorator {
 	return &Decorator{

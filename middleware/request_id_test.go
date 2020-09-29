@@ -1,13 +1,11 @@
 package middleware
 
 import (
-	"github.com/aphistic/sweet"
-	. "github.com/onsi/gomega"
+	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
-type RequestIDSuite struct{}
-
-func (s *RequestIDSuite) TestHandle(t sweet.T) {
-	// TODO
-	Expect(true).To(BeTrue())
+func TestRequestIDMiddleware(t *testing.T) {
+	assert.True(t, true) // TODO
 }
