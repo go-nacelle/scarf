@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/efritz/glock"
+	"github.com/derision-test/glock"
 	"github.com/go-nacelle/nacelle"
 	"google.golang.org/grpc"
 
